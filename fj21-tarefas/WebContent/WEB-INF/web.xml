@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+id="WebApp_ID" version="2.5">
+
+<!--  DECLARACAO DE SERVLETS -->
+
+
+
+<!--  DECLARACAO DE FILTERS -->
+
+<filter>
+<filter-name>struts2</filter-name>
+<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+</filter>
+
+<!--  MAPEAMENTO -->
+<filter-mapping>
+<filter-name>struts2</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<error-page>
+	<error-code>404</error-code>
+	<location>/404.html</location>
+</error-page>
+
+<session-config>
+	<session-timeout>3</session-timeout>
+</session-config>
+
+  <display-name>fj21-tarefas</display-name>
+  <welcome-file-list>
+    <welcome-file>bemvindo.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

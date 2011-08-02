@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<interceptors>
+			<interceptor name="autorizador" class="com.br.caelum.tarefas.interceptor.AutorizadorInterceptor" />
+			
+			<interceptor-stack name="seguranca">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="autorizador"></interceptor-ref>
+			</interceptor-stack>
+			
+		</interceptors>
+		
+		<global-results>
+			<result name="naoLogado">/login.jsp</result>
+		</global-results>
+	</package>
+</struts>
