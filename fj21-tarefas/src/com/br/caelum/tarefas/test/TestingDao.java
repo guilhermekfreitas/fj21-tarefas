@@ -13,7 +13,7 @@ public class TestingDao {
 		
 		Tarefa t = new Tarefa();
 		
-		t.setDescricao("Dormir cedo");
+		t.setDescricao("Dormir mais cedo");
 		t.setFinalizado(false);
 		t.setDataFinalizacao(Calendar.getInstance());
 		
